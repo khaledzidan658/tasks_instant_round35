@@ -5,22 +5,21 @@ import '../entites/patient.dart';
 
 class Data{
 
-  List<Doctor> doctors(){
-    return [
+  static List<Doctor> doctors = [
     Doctor(id: 0, name: 'Dr. Smith', patients: [patients[0] , patients[1]]),
     Doctor(id: 1, name: 'Dr. Jones', patients: [patients[2] , patients[3] , patients[4]]),
   ];
-  }
+  
 
 
-   List<Nurse> nurses() {
-    return[
-    Nurse(id: 0, name: 'Nurse Nancy', patients: [patients[5]], doctor: doctors()[0]),
-    Nurse(id: 1, name: 'Nurse Nick', patients: [], doctor: doctors()[1]),
+   static List<Nurse> nurses = 
+    [
+    Nurse(id: 0, name: 'Nurse Nancy', patients: [patients[5]], doctor: doctors[0]),
+    Nurse(id: 1, name: 'Nurse Nick', patients: [], doctor: doctors[1]),
   ];
-   }
+   
 
-   List<Patient> patients = [
+   static List<Patient> patients = [
     Patient(id: 0, name: 'Alice', age: 30, disease: ['Flu']),
     Patient(id: 1, name: 'Bob', age: 45, disease: ['Cough','Flu']),
     Patient(id: 2, name: 'Charlie', age: 22, disease: ['Fever']),

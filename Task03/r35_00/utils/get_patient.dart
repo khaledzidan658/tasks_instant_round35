@@ -10,7 +10,7 @@ Patient getPatient(){
   do {
     diseases.add(getInput('Please enter your disease:'));
   } while (getInput('Do you have another disease ? (y/n): ').toLowerCase().contains('y'));
-  Patient patient = Patient(id: Data().patients.length, name: name, age: age, disease: diseases);
-  Data().patients.add(patient);
+  Patient patient = Patient(id: Data.patients.length, name: name, age: age, disease: diseases);
+  Data.patients.add(patient);
   return patient;
 }
