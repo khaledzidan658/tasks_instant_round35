@@ -20,7 +20,6 @@ main() {
 
   Seartch(doctors);
 }
-
 printDoctorInfo() {
   List<Doctor> doctors = [];
   var max = 0.0;
